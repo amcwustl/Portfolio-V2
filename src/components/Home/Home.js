@@ -29,7 +29,7 @@ const Home = () => {
     <>
       <Container>
         <Row className="justify-content-end">
-          <Col className="home-page ml-md-4" xs={12} md={4}>
+          <Col className="home-page ml-md-4" xs={12} md={6}>
           <h1> 
             <span className={letterClass}>H</span>
             <span className={`${letterClass} _12`}>i,</span>

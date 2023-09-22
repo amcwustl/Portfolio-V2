@@ -1,27 +1,7 @@
 import { useEffect, useState } from 'react'
-import {
-  faJava,
-  faCss3,
-  faAndroid,
-  faHtml5,
-  faJsSquare,
-  faReact,
-} from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './About.scss'
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, 3000);
-  
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
 
   return (
     <>
@@ -39,29 +19,6 @@ const About = () => {
           <p>
             Augue ut lectus arcu bibendum at varius vel pharetra vel. Dictum non consectetur a erat nam at lectus urna. Dolor sit amet consectetur adipiscing. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Accumsan in nisl nisi scelerisque eu. Maecenas sed enim ut sem viverra. Dolor sed viverra ipsum nunc aliquet bibendum enim. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus. Eu scelerisque felis imperdiet proin fermentum leo vel orci porta. Suscipit adipiscing bibendum est ultricies integer quis auctor elit sed. Odio pellentesque diam volutpat commodo sed.
           </p>
-        </div>
-
-        <div className="stage-cube-cont">
-          <div className="cubespinner">
-            <div className="face1">
-              <FontAwesomeIcon icon={faJava} color="#5382a1" />
-            </div>
-            <div className="face2">
-              <FontAwesomeIcon icon={faHtml5} color="#F06529" />
-            </div>
-            <div className="face3">
-              <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
-            </div>
-            <div className="face4">
-              <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
-            </div>
-            <div className="face5">
-              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
-            </div>
-            <div className="face6">
-              <FontAwesomeIcon icon={faAndroid} color="#3DDC84" />
-            </div>
-          </div>
         </div>
       </div>
     </>

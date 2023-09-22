@@ -13,15 +13,6 @@ body {
   display: block;
 }
 
-/* background: url('../src/assets/images/background3.jpg') no-repeat center center fixed;
-background-size: cover;
-overflow: hidden;
-display: block; */
-
-.dashboard {
-  margin-top: 200px;
-  margin-left: 200px;
-}
 
 @media screen and (max-width: 1200px) {
   body {
