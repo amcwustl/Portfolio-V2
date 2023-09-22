@@ -9,8 +9,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './About.scss'
-import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
-import Loader from 'react-loaders'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -27,14 +25,10 @@ const About = () => {
 
   return (
     <>
-      <div className="container about-page">
+      <div className="about-page">
         <div className="text-zone">
           <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
-              idx={15}
-            />
+            About Me
           </h1>
           <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Eu lobortis elementum nibh tellus molestie nunc. Venenatis cras sed felis eget velit. Nisi porta lorem mollis aliquam ut. Interdum consectetur libero id faucibus nisl tincidunt eget nullam non. Ipsum suspendisse ultrices gravida dictum fusce. Amet facilisis magna etiam tempor orci eu. Purus semper eget duis at tellus. Tristique sollicitudin nibh sit amet commodo. In fermentum posuere urna nec tincidunt praesent semper feugiat. Laoreet id donec ultrices tincidunt arcu non sodales neque sodales. Tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam vestibulum morbi blandit cursus.
@@ -70,7 +64,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Loader type="cube-transition" />
     </>
   )
 }

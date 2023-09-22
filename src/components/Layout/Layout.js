@@ -39,7 +39,7 @@ const Layout = () => {
 
   return (
     <div className="App">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div
        ref={divRef}
        onMouseMove={handleMouseMove}
