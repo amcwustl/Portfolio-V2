@@ -1,0 +1,11 @@
+.work-experience {
+  padding: 20px; /* Add padding to create spacing inside the element */
+  border-radius: 8px;
+  transition: background-color 0.3s, opacity 0.3s;
+  opacity: 1;
+}
+
+.work-experience:hover {
+  background-color: rgba(10, 25, 47, 0.8); /* Change opacity on hover */
+  cursor: pointer; /* Add a pointer cursor on hover to indicate interactivity */
+}

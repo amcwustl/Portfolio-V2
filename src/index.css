@@ -9,13 +9,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #1b0234;
-  overflow: hidden;
   display: block;
 }
 
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   body {
     overflow: visible;
   }
-}
+} */
