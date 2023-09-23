@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import './About.scss'
 
 const About = () => {

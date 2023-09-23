@@ -83,12 +83,11 @@ const handleMouseMove = (e) => {
               <span className={`${letterClass} _13`}>I</span>
               <span className={`${letterClass} _14`}>'m</span>
               <span className="space">&nbsp;</span>
-            <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={12}/>
-            <br />
-            <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={15} />
-            <span className="space">&nbsp;</span>
-            <AnimatedLetters letterClass={letterClass} strArray={jobArrayTwo} idx={20} />
-
+              <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={12}/>
+              <br />
+              <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={15} />
+              <span className="space">&nbsp;</span>
+              <AnimatedLetters letterClass={letterClass} strArray={jobArrayTwo} idx={20} />
             </h1>
             <h2>Frontend Developer / Javascript and Java specialist</h2>
             <Link to="/contact" className = 'flat-button'>CONTACT ME</Link>

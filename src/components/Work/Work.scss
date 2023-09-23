@@ -1,11 +1,87 @@
-.work-experience {
-  padding: 20px; /* Add padding to create spacing inside the element */
+@media(max-width: 767px){
+  .section-heading {
+    font-size: 20px;
+    font-family: 'Coolvetica';
+    color: #64ffda;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .work-experience {
+    padding: 20px; 
+    border-radius: 8px;
+    transition: background-color 0.3s, opacity 0.3s;
+    opacity: 1;
+  
+    h1{
+      font-size: 20px;
+      font-family: 'Coolvetica';
+      color: #fff;
+      font-weight: 400;
+    }
+    h2{
+      font-size: 16px;
+      font-family: 'Helvetica Neue';
+      font-weight:300;
+      color:#fff;
+      opacity: 0.8;
+     
+    }
+  
+    p{
+      font-size:14px;
+      color:#fff;
+      font-family: sans-serif;
+      font-weight:300;
+      opacity:0.5;
+    }
+  }
+
+
+}
+
+@media(min-width: 768px){
+  .section-heading {
+    font-size: 3rem;
+    font-family: 'Coolvetica';
+    color: #64ffda;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  .work-experience {
+  padding: 20px; 
   border-radius: 8px;
   transition: background-color 0.3s, opacity 0.3s;
   opacity: 1;
+
+  h1{
+    font-size: 2rem;
+    font-family: 'Coolvetica';
+    color: #fff;
+    font-weight: 400;
+  }
+  h2{
+    font-size: 16px;
+    font-family: 'Helvetica Neue';
+    font-weight:300;
+    color:#fff;
+    opacity: 0.8;
+  }
+
+  p{
+    font-size:16px;
+    color:#fff;
+    font-family: sans-serif;
+    font-weight:300;
+    opacity:0.5;
+  }
 }
 
 .work-experience:hover {
-  background-color: rgba(10, 25, 47, 0.8); /* Change opacity on hover */
-  cursor: pointer; /* Add a pointer cursor on hover to indicate interactivity */
+  background-color: rgba(10, 25, 47, 0.8);
+  cursor: pointer; 
+}
 }

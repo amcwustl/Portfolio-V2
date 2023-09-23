@@ -20,6 +20,7 @@ const Work = () => {
   
   return (
     <Container>
+      <h1 className="section-heading">Where I've Worked</h1>
       {workExperience.map((experience) => (
         <Row className="work-experience" key={experience.id}>
           <Col xs={3}>
