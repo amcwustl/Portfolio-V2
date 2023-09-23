@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "date": "Sep 2020 - Apr 2023",
+    "company": "NavigatorCRE",
+    "position": "Director of Project Management",
+    "description": "Spearheaded the successful execution of software implementations for new clients, contributing to new annual recurring revenue surpassing $3 million. Introduced agile management practices within the data engineering and business intelligence teams. Established efficient onboarding procedures that facilitated the expansion of the project management team, enabling the company to meet growing demands effectively.",
+    "skills": ["Agile", "Product Development", "Project Management"]
+  },
+  {
+    "id": 2,
+    "date": "Dec 2018 - Jul 2020",
+    "company": "Katerra",
+    "position": "Project Manager",
+    "description": "Orchestrated the strategic planning and execution of multi-million dollar building product deliveries, leveraging agile methodologies in collaboration with a cross-functional team. Developed a robust QC process and issue tracking system, resulting in the successful resolution of hundreds of quality issues per week and a dramatic increase in issue resolution cycle time efficiency.",
+    "skills": ["Agile", "Project Management", "Project Delivery"]
+  },
+  {
+    "id": 3,
+    "date": "Apr 2013 - Dec 2018",
+    "company": "Sider + Byers Engineers",
+    "position": "Mechanical Engineer",
+    "description": "Specialized in producing intricate construction documents for both commercial and residential structures. Streamlined the permitting process by coding automated forms for the engineering team, leading to a 50% reduction in permitting form completion time company-wide.",
+    "skills": ["Engineering", "Consulting", "Client Management"]
+  }
+  
+]
