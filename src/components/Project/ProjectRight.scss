@@ -29,17 +29,6 @@
     vertical-align: middle;
   }
 
-  @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @mixin flex-between {
-    display: flex;
-    justify-content: space-between;
-  }
-
   @mixin tablet {
     @media (max-width: 600px) {
       @content;
@@ -81,9 +70,12 @@
     }
 
     .project-details {
+      position: relative;
       font-size: 15px;
       line-height: 1.5;
+      border-radius: 20px;
       color: #aaa;
+      z-index: 2;
 
       p {
         background-color: #252525;
@@ -110,49 +102,50 @@
 
   .project-img {
     position: relative;
-    z-index: -1;
-    background-color: #64ffda;
-    background: linear-gradient(0.4turn, #64ffda, #64ff8d);
     border-radius: 2px;
     grid-column: 6 / -1;
     grid-row: 1 / -1;
-
+  
+    background-color: #64ffda;
+    background: rgba(100, 255, 218, 0.5);
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  
     @media screen and (max-width: 768px) {
       height: 100%;
     }
-
+  
     @include tablet {
       grid-column: 1 / -1;
+      height: 100%;
       opacity: 0.25;
     }
-
-    &:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 3;
-      background-color: #0a192f;
-      mix-blend-mode: screen;
-      border-radius: 2px;
-    }
-
+  
     img {
       border-radius: 2px;
       position: relative;
       mix-blend-mode: multiply;
       filter: grayscale(100%) contrast(1);
-
+      transition: transform 0.3s ease-in-out;
+  
       @media screen and (max-width: 768px) {
         object-fit: cover;
         width: auto;
         height: 100%;
       }
     }
+  
+    &:hover,
+  &:focus {
+    background: transparent;
+    outline: 0;
+    z-index: 3;
+
+    img {
+      background: transparent;
+      filter: none;
+      transform: scale(1.2);
+    }
+  }
   }
 
   .project-links {
@@ -167,61 +160,61 @@
     }
   }
 
-    .project:nth-child(even) {
-      .project-content {
-        grid-column: 7 / -1;
-        text-align: right;
+  .project:nth-child(even) {
+    .project-content {
+      grid-column: 7 / -1;
+      text-align: right;
 
-        @media (max-width: 1080px) {
-          grid-column: 5 / -1;
-        }
-
-        @media (max-width: 768px) {
-          grid-column: 1 / -1;
-          padding: 40px 40px 30px;
-          text-align: left;
-        }
-
-        @media (max-width: 480px) {
-          padding: 25px 25px 20px;
-        }
+      @media (max-width: 1080px) {
+        grid-column: 5 / -1;
       }
 
-      .project-tech-list {
-        justify-content: flex-end;
-
-        @media (max-width: 768px) {
-          justify-content: flex-start;
-        }
-
-        li {
-          margin: 0 0 5px 20px;
-
-          @media (max-width: 768px) {
-            margin: 0 10px 5px 0;
-          }
-        }
+      @media (max-width: 768px) {
+        grid-column: 1 / -1;
+        padding: 40px 40px 30px;
+        text-align: left;
       }
 
-      .project-links {
-        justify-content: flex-end;
-        margin-left: 0;
-        margin-right: -10px;
+      @media (max-width: 480px) {
+        padding: 25px 25px 20px;
+      }
+    }
 
-        @media (max-width: 768px) {
-          justify-content: flex-start;
-          margin-left: -10px;
-          margin-right: 0;
-        }
+    .project-tech-list {
+      justify-content: flex-end;
+
+      @media (max-width: 768px) {
+        justify-content: flex-start;
       }
 
-      .project-img {
-        grid-column: 1 / 8;
+      li {
+        margin: 0 0 5px 20px;
 
         @media (max-width: 768px) {
-          grid-column: 1 / -1;
+          margin: 0 10px 5px 0;
         }
       }
     }
+
+    .project-links {
+      justify-content: flex-end;
+      margin-left: 0;
+      margin-right: -10px;
+
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+        margin-left: -10px;
+        margin-right: 0;
+      }
+    }
+
+    .project-img {
+      grid-column: 1 / 8;
+
+      @media (max-width: 768px) {
+        grid-column: 1 / -1;
+      }
+    }
+  }
 
 }

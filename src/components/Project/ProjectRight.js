@@ -14,7 +14,7 @@ const ProjectRight = () => {
             <div className="project-label">Game of Thrones</div>
             <h4 className="project-title">A Clash of Kings</h4>
             <div className="project-details">
-              <p>Lorem ipsum dolor amet you probably haven't heard of them bitters selvage listicle heirloom. Locavore kombucha street art ennui 90's, organic food truck hell of seitan skateboard literally hexagon fixie next level. Lomo salvia yuccie hella roof party echo park vegan four dollar toast cred.</p>
+              <p>Lorem ipsum dolor amet you probably haven't heard of them bitters selvage listicle heirloom. Locavore kombucha street art ennui 90's, organic food truck hell of seitan skateboard literally hexagon fixie next level.</p>
               <ul className="project-tech-list">
                 <li>Shadow</li>
                 <li>Demon</li>
@@ -41,7 +41,7 @@ const ProjectRight = () => {
             <div className="project-label">Game of Thrones</div>
             <h4 className="project-title">A Clash of Kings</h4>
             <div className="project-details">
-              <p>Lorem ipsum dolor amet you probably haven't heard of them bitters selvage listicle heirloom. Locavore kombucha street art ennui 90's, organic food truck hell of seitan skateboard literally hexagon fixie next level. Lomo salvia yuccie hella roof party echo park vegan four dollar toast cred.</p>
+              <p>Lorem ipsum dolor amet you probably haven't heard of them bitters selvage listicle heirloom. Locavore kombucha street art ennui 90's, organic food truck hell of seitan skateboard literally hexagon fixie next level.</p>
               <ul className="project-tech-list">
                 <li>Shadow</li>
                 <li>Demon</li>
