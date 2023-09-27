@@ -1,0 +1,231 @@
+.project-container {
+  max-width: 1000px;
+  margin: 50px auto;
+
+  a {
+    display: inline-blesock;
+    color: inherit;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+  }
+
+  button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  @mixin tablet {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+  .project {
+    margin: 30px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      align-items: flex-start;
+    }
+  }
+
+  .project-content {
+    position: relative;
+    grid-column: 1 / 8;
+    grid-row: 1 / -1;
+
+    @include tablet {
+      grid-column: 1 / -1;
+      padding: 40px;
+    }
+
+    .project-label {
+      color: #64ffda;
+      font-family: monospace;
+    }
+
+    .project-title {
+      font-size: 2rem;
+      margin: 10px 0 30px;
+      color: #eee;
+    }
+
+    .project-details {
+      position: relative;
+      font-family: sans-serif;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #aaa;
+      z-index: 2;
+
+      p {
+        background-color: #252525;
+        padding: 10px 15px;
+        border-radius:5px;
+
+        @include tablet {
+          background-color: transparent;
+          padding: 20px 0;
+        }
+      }
+
+      .project-tech-list {
+        display: flex;
+        margin-top: 20px;
+
+        li {
+          margin-right: 20px;
+          color: #aaa;
+          font-family: monospace;
+        }
+      }
+    }
+  }
+
+  .project-img {
+    position: relative;
+    border-radius: 2px;
+    grid-column: 6 / -1;
+    grid-row: 1 / -1;
+  
+    background-color: #64ffda;
+    background: rgba(100, 255, 218, 0.5);
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  
+    @media screen and (max-width: 768px) {
+      height: 100%;
+    }
+  
+    @include tablet {
+      grid-column: 1 / -1;
+      height: 100%;
+      opacity: 0.25;
+    }
+  
+    img {
+      border-radius: 2px;
+      position: relative;
+      mix-blend-mode: multiply;
+      aspect-ratio: auto 700 / 438;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(1);
+      transition: transform 0.3s ease-in-out;
+  
+      @media screen and (max-width: 768px) {
+        object-fit: cover;
+        width: auto;
+        height: 100%;
+      }
+    }
+  
+    &:hover,
+  &:focus {
+    background: transparent;
+    outline: 0;
+    z-index: 3;
+
+    img {
+      background: transparent;
+      filter: none;
+      transform: scale(1.2);
+    }
+  }
+  }
+
+  .project-links {
+    justify-content: flex-end;
+    margin-left: 0;
+    margin-right: -10px;
+
+    a{
+      margin-right:10px;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+      margin-left: -10px;
+      margin-right: 0;
+
+      a{
+        margin-right:10px;
+      }
+    }
+  }
+
+  .project:nth-child(even) {
+    .project-content {
+      grid-column: 6 / -1;
+      text-align: right;
+
+      @media (max-width: 1080px) {
+        grid-column: 5 / -1;
+      }
+
+      @media (max-width: 768px) {
+        grid-column: 1 / -1;
+        padding: 40px 40px 30px;
+        text-align: left;
+      }
+
+      @media (max-width: 480px) {
+        padding: 25px 25px 20px;
+      }
+    }
+
+    .project-tech-list {
+      justify-content: flex-end;
+
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+      }
+
+      li {
+        margin: 0 0 5px 20px;
+
+        @media (max-width: 768px) {
+          margin: 0 10px 5px 0;
+        }
+      }
+    }
+
+    .project-links {
+      justify-content: flex-end;
+      margin-left: 0;
+      margin-right: -10px;
+
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+        margin-left: -10px;
+        margin-right: 0;
+      }
+    }
+
+    .project-img {
+      grid-column: 1 / 8;
+
+      @media (max-width: 768px) {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+}

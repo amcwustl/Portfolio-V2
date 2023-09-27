@@ -9,6 +9,7 @@ import './Home.scss'
 import './Spotlight.scss'
 import About from '../About/About'
 import Work from '../Work/Work'
+import ProjectRight from '../Project/ProjectRight'
 
 
 const Home = () => {
@@ -95,6 +96,7 @@ const handleMouseMove = (e) => {
           <Col className="ml-md-12 mt-md-0 mt-2" xs={12} md={6}>
             <About />
             <Work />
+            <ProjectRight />
           </Col>
       </Row>
       </Container>
