@@ -50,7 +50,7 @@
 
   .project-content {
     position: relative;
-    grid-column: 1 / 7;
+    grid-column: 1 / 8;
     grid-row: 1 / -1;
 
     @include tablet {
@@ -71,15 +71,16 @@
 
     .project-details {
       position: relative;
-      font-size: 15px;
+      font-family: sans-serif;
+      font-size: 12px;
       line-height: 1.5;
-      border-radius: 20px;
       color: #aaa;
       z-index: 2;
 
       p {
         background-color: #252525;
-        padding: 20px 25px;
+        padding: 10px 15px;
+        border-radius:5px;
 
         @include tablet {
           background-color: transparent;
@@ -124,6 +125,8 @@
       border-radius: 2px;
       position: relative;
       mix-blend-mode: multiply;
+      aspect-ratio: auto 700 / 438;
+      object-fit: cover;
       filter: grayscale(100%) contrast(1);
       transition: transform 0.3s ease-in-out;
   
@@ -153,16 +156,24 @@
     margin-left: 0;
     margin-right: -10px;
 
+    a{
+      margin-right:10px;
+    }
+
     @media (max-width: 768px) {
       justify-content: flex-start;
       margin-left: -10px;
       margin-right: 0;
+
+      a{
+        margin-right:10px;
+      }
     }
   }
 
   .project:nth-child(even) {
     .project-content {
-      grid-column: 7 / -1;
+      grid-column: 6 / -1;
       text-align: right;
 
       @media (max-width: 1080px) {
