@@ -1,10 +1,11 @@
+import React from 'react';
 import './About.scss'
 
-const About = () => {
+const About = React.forwardRef((props, ref) => {
 
   return (
-    <>
-      <div className="about-page">
+    
+      <div className="about-page" ref={ref}>
         <div className="text-zone">
           <h1>
             About Me
@@ -20,9 +21,9 @@ const About = () => {
           </p>
         </div>
       </div>
-    </>
-  )
-}
+    
+  );
+});
 
 export default About
 

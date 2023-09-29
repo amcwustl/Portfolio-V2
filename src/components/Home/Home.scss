@@ -1,5 +1,8 @@
 @media (max-width: 767px) {
   .home-page {
+    .nav {
+      display: none;
+    }
 
     h1 {
       color: white;
@@ -12,6 +15,7 @@
     h2 {
       color:#8d8d8d;
       margin-top:20px;
+      margin-bottom: 20px;
       font-weight: 400;
       font-size: 11px;
       font-family:sans-serif;
@@ -43,7 +47,58 @@
 
 @media(min-width: 768px){
   .home-page {
-    margin-top:3vh;
+    margin-top: 3vh;
+    position: sticky;
+    top: 0; // Stick to the top of its container
+    height: 100vh; // Take up the full viewport height
+    overflow-y: auto;
+    padding-left: 48px;
+
+    .nav {
+      display: flex;
+      flex-direction: column; // Stack items vertically
+
+      .nav-item {
+        margin-bottom: 10px; // Space between the items
+
+        .nav-link {
+          display: flex; 
+          font-size: 16px;
+          align-items: center; // Vertically center-align text and bar
+          color: slategray; // Non-active links will be slate gray
+          padding: 0; // Adjusted padding
+          text-decoration: none; // Remove underline
+          transition: transform 0.3s ease; // Transition for the text slide effect
+          position: relative; // This will help us position the ::before element correctly
+
+          &::before { // This is the horizontal bar
+            content: '';
+            position: absolute;
+            left: -35px; // Position the bar to the left of the text by 25px (20px bar width + 5px gap)
+            top: 50%; // Center the bar vertically
+            transform: translateY(-50%); // Vertically align the bar
+            height: 2px; // Adjust the bar's height
+            width: 30px; // Length of the horizontal bar
+            background-color: white;
+            transform: scaleX(0); // Initially scale it to 0 to hide
+            transform-origin: left;
+            transition: transform 0.3s ease;
+          }
+
+          &.active, &:hover { // Style for active link or on hover
+            color: white; // Make text color white
+            transform: translateX(35px); // Slide the text to the right by the width of the bar + gap
+
+            &::before { // Show the horizontal bar on active link or on hover
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+  
+
+    
   h1 {
     color: white;
     font-size: 3rem;
