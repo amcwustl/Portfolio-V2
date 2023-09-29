@@ -10,8 +10,17 @@
       margin-top: 20px;
     }
 
+    a {
+      font-family: sans-serif; 
+      font-weight: bold; 
+      color: #fff;
+      opacity: 1;
+      text-decoration: none; 
+      transition: color 0.3s;
+    }
+
     p {
-      font-size: 16px;
+      font-size: 14px;
       color: #fff;
       font-family: sans-serif;
       font-weight: 300;
@@ -43,9 +52,22 @@
       margin-bottom: 20px;
       margin-top: 20px;
     }
+
+    a {
+      font-family: sans-serif; 
+      font-weight: bold; 
+      color: white;
+      opacity: 1;
+      text-decoration: none; 
+      transition: color 0.3s; 
+    }
+
+    a:hover {
+      color: #64ffda;
+    }
   
     p {
-      font-size: 16px;
+      font-size: 14px;
       color: #fff;
       font-family: sans-serif;
       font-weight: 300;
