@@ -3,47 +3,69 @@ import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Loader from 'react-loaders'
-import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import './Home.scss'
 import './Spotlight.scss'
 import About from '../About/About'
 import Work from '../Work/Work'
-import ProjectRight from '../Project/ProjectRight'
+import ProjectRight from '../Project/ProjectRight';
+import Footer from '../Footer/Footer';
 
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = ['A','a', 'r', 'o', 'n', ',']
-  const jobArray = ['S','o','f','t','w','a','r','e']
-  const jobArrayTwo = ['D','e','v','e','l','o','p','e','r','.']
+  const nameArray = ['A', 'a', 'r', 'o', 'n'];
+  const lastNameArray = ['C', 'l', 'a', 'r', 'k'];
+  const aboutRef = useRef(null);
+  const workRef = useRef(null);
+  const projectsRef = useRef(null);
+  const [activeSection, setActiveSection] = useState("about");
+
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, 4000);
-  
+    const handleScroll = () => {
+      const threshold = window.innerHeight * 0.13;
+      const aboutPosition = aboutRef.current?.getBoundingClientRect().top;
+      const workPosition = workRef.current?.getBoundingClientRect().top;
+      const projectsPosition = projectsRef.current?.getBoundingClientRect().top;
+
+      if (projectsPosition <= threshold && projectsPosition > 0) {
+        setActiveSection("projects");
+      } else if (workPosition <= threshold && workPosition > 0) {
+        setActiveSection("work");
+      } else if (aboutPosition <= threshold && aboutPosition > 0) {
+        setActiveSection("about");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
-      clearTimeout(timeoutId);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
+  const smoothScroll = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+    // Prevent default behavior
+    return false;
+  }
 
   const divRef = useRef(null);
   const [isFocused, setIsFocused] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
 
-const handleMouseMove = (e) => {
-  if (!divRef.current || isFocused) return;
+  const handleMouseMove = (e) => {
+    if (!divRef.current || isFocused) return;
 
-  const div = divRef.current;
-  const rect = div.getBoundingClientRect();
+    const div = divRef.current;
+    const rect = div.getBoundingClientRect();
 
-  setPosition({
-    x: e.clientX - rect.left,
-    y: e.clientY - rect.top - window.scrollY,
-  });
-};
+    setPosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top - window.scrollY,
+    });
+  };
 
   const handleFocus = () => {
     setIsFocused(true);
@@ -76,39 +98,62 @@ const handleMouseMove = (e) => {
     >
       <Container>
         <Row className="justify-content-end">
-          <Col className="home-page ml-md-4" xs={12} md={6}>
-            <h1> 
-              <span className={letterClass}>H</span>
-              <span className={`${letterClass} _12`}>i,</span>
+          <Col className="home-page ml-md-4 pl-5" xs={12} md={6}>
+            <h1>
+              <span className="text-animate-hover">H</span>
+              <span className="text-animate-hover">i</span>
+              <span className="text-animate-hover">!</span>
+              <span className="text-animate-hover">&nbsp;I</span>
+              <span className="text-animate-hover">'m</span>
               <br />
-              <span className={`${letterClass} _13`}>I</span>
-              <span className={`${letterClass} _14`}>'m</span>
+              {nameArray.map((char, i) => (
+                <span key={char + i} className="text-animate-hover">
+                  {char}
+                </span>
+              ))}
               <span className="space">&nbsp;</span>
-              <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={12}/>
-              <br />
-              <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={15} />
-              <span className="space">&nbsp;</span>
-              <AnimatedLetters letterClass={letterClass} strArray={jobArrayTwo} idx={20} />
+              {lastNameArray.map((char, i) => (
+                <span key={char + i} className="text-animate-hover">
+                  {char}
+                </span>
+              ))}
+
+
             </h1>
-            <h2>Frontend Developer / Javascript and Java specialist</h2>
-            <Link to="/contact" className = 'flat-button'>CONTACT ME</Link>
+            <h2>Frontend Developer</h2>
+            <ul className="nav">
+              <li className="nav-item">
+                <a className={`nav-link ${activeSection === "about" ? "active" : ""}`} href="#about" onClick={() => smoothScroll(aboutRef)}>About</a>
+              </li>
+              <li className="nav-item">
+                <a className={`nav-link ${activeSection === "work" ? "active" : ""}`} href="#work" onClick={() => smoothScroll(workRef)} >Experience</a>
+              </li>
+              <li className="nav-item">
+                <a className={`nav-link ${activeSection === "projects" ? "active" : ""}`} href="#projects" onClick={() => smoothScroll(projectsRef)} >Projects</a>
+              </li>
+            </ul>
+            <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+            <Footer />
           </Col>
           <Col className="ml-md-12 mt-md-0 mt-2" xs={12} md={6}>
-            <About />
-            <Work />
-            <ProjectRight />
+
+
+            <About ref={aboutRef} id="about" />
+            <Work ref={workRef} id="work" />
+            <ProjectRight ref={projectsRef} id="projects" />
+
+
+
           </Col>
-      </Row>
+        </Row>
       </Container>
-      <Loader type="cube-transition" />
       <div
-          className="spotlight"
-          style={{
-            opacity,
-            background: `radial-gradient(200px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.06), transparent 100%)`,
-          }}
-        />
-        <div></div>
+        className="spotlight"
+        style={{
+          opacity,
+          background: `radial-gradient(200px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.06), transparent 100%)`,
+        }}
+      />
     </div>
 
   )

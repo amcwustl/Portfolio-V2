@@ -9,17 +9,16 @@ import './Work.scss';
 
 
 
-const Work = () => {
+const Work = React.forwardRef((props, ref) => {
 
   const [workExperience, setWorkExperience] = useState([]);
 
   useEffect(() => {
-    // Load the work experience data from your JSON file
     setWorkExperience(workExperienceData);
   }, []);
   
   return (
-    <Container>
+    <Container ref={ref}>
       <h1 className="section-heading">Where I've Worked</h1>
       {workExperience.map((experience) => (
         <Row className="work-experience" key={experience.id}>
@@ -42,6 +41,6 @@ const Work = () => {
       ))}
     </Container>
   );
-};
+});
 
 export default Work;

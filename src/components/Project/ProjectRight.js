@@ -7,9 +7,9 @@ import fridgeImage from '../../assets/images/FridgeMates.jpg';
 import cineWatch from '../../assets/images/cinewatch.jpg';
 import './ProjectRight.scss';
 
-const ProjectRight = () => {
+const ProjectRight = React.forwardRef((props, ref) => {
   return (
-    <>
+    <div ref={ref}>
       <h1 className="section-heading">Some of My Projects</h1>
       <div className="project-container">
         <div className="project">
@@ -103,8 +103,8 @@ const ProjectRight = () => {
         </div>
 
       </div>
-    </>
-  )
-}
+    </div>
+  );
+});
 
 export default ProjectRight

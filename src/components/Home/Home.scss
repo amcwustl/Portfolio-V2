@@ -1,9 +1,12 @@
 @media (max-width: 767px) {
   .home-page {
+    .nav {
+      display: none;
+    }
 
     h1 {
       color: white;
-      font-size: 16px;
+      font-size: 32px;
       margin:0;
       font-family: 'Coolvetica';
       font-weight: 400;
@@ -11,12 +14,12 @@
   
     h2 {
       color:#8d8d8d;
-      margin-top:20px;
+      margin-top:8px;
+      margin-bottom: 20px;
       font-weight: 400;
       font-size: 11px;
       font-family:sans-serif;
       letter-spacing: 3px;
-      animation: fadeIn 1s 1.8s backwards;
     }
   
     .flat-button {
@@ -29,21 +32,77 @@
       padding: 10px 18px;
       border: 1px solid #64ffda;
       margin-top: 25px;
-      float: left;
-      animation: fadeIn 1s 1.8s backwards;
       white-space: nowrap;
   
-      &:hover {
-        background: #64ffda;
-        color: #333;
-      }
+    }
+
+    .footer {
+      width: 100%;
+      display: block;
+      margin-top: 16px;
     }
   }
 }
 
 @media(min-width: 768px){
   .home-page {
-    margin-top:3vh;
+    position: sticky;
+    top: 5vh;
+    height: 100vh;
+    overflow-y: auto;
+    padding-left: 48px;
+
+    .nav {
+      display: flex;
+      flex-direction: column; // Stack items vertically
+
+      .nav-item {
+        margin-bottom: 10px; // Space between the items
+
+        .nav-link {
+          display: flex; 
+          font-size: 16px;
+          align-items: center; // Vertically center-align text and bar
+          color: slategray; // Non-active links will be slate gray
+          padding: 0; // Adjusted padding
+          text-decoration: none; // Remove underline
+          transition: transform 0.3s ease; // Transition for the text slide effect
+          position: relative; // This will help us position the ::before element correctly
+
+          &::before { // This is the horizontal bar
+            content: '';
+            position: absolute;
+            left: -35px; // Position the bar to the left of the text by 25px (20px bar width + 5px gap)
+            top: 50%; // Center the bar vertically
+            transform: translateY(-50%); // Vertically align the bar
+            height: 2px; // Adjust the bar's height
+            width: 30px; // Length of the horizontal bar
+            background-color: white;
+            transform: scaleX(0); // Initially scale it to 0 to hide
+            transform-origin: left;
+            transition: transform 0.3s ease;
+          }
+
+          &.active, &:hover { // Style for active link or on hover
+            color: white; // Make text color white
+            transform: translateX(35px); // Slide the text to the right by the width of the bar + gap
+
+            &::before { // Show the horizontal bar on active link or on hover
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+
+    .footer {
+      position: absolute; 
+      bottom: 5vh;          // Stick it to the bottom.
+      width: 100%;        // Ensure it takes up the full width of the container.
+    }
+  
+
+    
   h1 {
     color: white;
     font-size: 3rem;
@@ -51,6 +110,17 @@
     font-family: 'Coolvetica';
     font-weight: 400;
     position: relative;
+
+    .text-animate-hover {
+      margin: 1px;
+      display: inline-block;
+      animation-fill-mode: both;
+  
+      &:hover {
+        animation: rubberBand 1s;
+        color: #64ffda;
+      }
+    }
 
     &::before {
       content: '<h1>';
@@ -70,7 +140,6 @@
       font-size: 18px;
       position: absolute;
       bottom:-15px;
-      animation: fadeIn 1s 1.7s backwards;
       opacity:0.6;
     }
   }
@@ -78,11 +147,12 @@
   h2 {
     color:#8d8d8d;
     margin-top:2rem;
+    margin-bottom: 2rem;
     font-weight: 400;
     font-size: 11px;
     font-family:sans-serif;
     letter-spacing: 3px;
-    animation: fadeIn 1s 1.8s backwards;
+    // animation: fadeIn 1s 1.8s backwards;
   }
 
   .flat-button {
@@ -96,7 +166,7 @@
     border: 1px solid #64ffda;
     margin-top: 25px;
     float: left;
-    animation: fadeIn 1s 1.8s backwards;
+    // animation: fadeIn 1s 1.8s backwards;
     white-space: nowrap;
 
     &:hover {
