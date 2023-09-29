@@ -1,4 +1,7 @@
 @media(max-width: 767px){
+  .custom-pill {
+    font-size: 12px;     
+  }
   .section-heading {
     font-size: 20px;
     font-family: 'Coolvetica';
@@ -42,6 +45,9 @@
 }
 
 @media(min-width: 768px){
+  .custom-pill {
+    font-size: 14px;     
+  }
   .section-heading {
     font-size: 3rem;
     font-family: 'Coolvetica';
@@ -56,11 +62,13 @@
   border-radius: 8px;
   transition: background-color 0.3s, opacity 0.3s;
   opacity: 1;
+  
 
   .date{
-    font-size: 14px;
-    font-family: sans-serif;
-    font-weight: 300;
+    font-size: 12px;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    margin-top: 12px;
   }
 
   h1{
@@ -70,7 +78,7 @@
     font-weight: 400;
   }
   h2{
-    font-size: 16px;
+    font-size: 1.5rem;
     font-family: 'Helvetica Neue';
     font-weight:300;
     color:#fff;
@@ -78,11 +86,12 @@
   }
 
   p{
-    font-size:16px;
+    font-size:1rem;
     color:#fff;
     font-family: sans-serif;
     font-weight:300;
     opacity:0.5;
+    line-height:1.6;
   }
 }
 
