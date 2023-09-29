@@ -107,6 +107,17 @@
     font-weight: 400;
     position: relative;
 
+    .text-animate-hover {
+      margin: 1px;
+      display: inline-block;
+      animation-fill-mode: both;
+  
+      &:hover {
+        animation: rubberBand 1s;
+        color: #64ffda;
+      }
+    }
+
     &::before {
       content: '<h1>';
       font-family: 'La Belle Aurore';
@@ -125,7 +136,6 @@
       font-size: 18px;
       position: absolute;
       bottom:-15px;
-      animation: fadeIn 1s 1.7s backwards;
       opacity:0.6;
     }
   }
@@ -133,11 +143,12 @@
   h2 {
     color:#8d8d8d;
     margin-top:2rem;
+    margin-bottom: 2rem;
     font-weight: 400;
     font-size: 11px;
     font-family:sans-serif;
     letter-spacing: 3px;
-    animation: fadeIn 1s 1.8s backwards;
+    // animation: fadeIn 1s 1.8s backwards;
   }
 
   .flat-button {
@@ -151,7 +162,7 @@
     border: 1px solid #64ffda;
     margin-top: 25px;
     float: left;
-    animation: fadeIn 1s 1.8s backwards;
+    // animation: fadeIn 1s 1.8s backwards;
     white-space: nowrap;
 
     &:hover {
