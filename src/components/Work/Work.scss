@@ -1,4 +1,7 @@
 @media(max-width: 767px){
+  .custom-stack {
+    flex-direction: column;
+  }
   .custom-pill {
     font-size: 12px;     
   }
@@ -47,6 +50,9 @@
 @media(min-width: 768px){
   .custom-pill {
     font-size: 14px;     
+  }
+  .custom-stack {
+    flex-direction:row;
   }
   .section-heading {
     font-size: 3rem;
