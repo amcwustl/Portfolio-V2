@@ -105,7 +105,7 @@
     
   h1 {
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
     margin:0;
     font-family: 'Coolvetica';
     font-weight: 400;
@@ -126,21 +126,21 @@
       content: '<h1>';
       font-family: 'La Belle Aurore';
       color: #64ffda;
-      font-size: 18px;
+      font-size: 22px;
       position: absolute;
       top:0;
       left:-40px;
-      opacity: 0.6;
+      opacity: 0.8;
     }
 
     &::after {
       content: '<h1 />';
       font-family: 'La Belle Aurore';
       color: #64ffda;
-      font-size: 18px;
+      font-size: 22px;
       position: absolute;
       bottom:-15px;
-      opacity:0.6;
+      opacity:0.8;
     }
   }
 
@@ -149,10 +149,9 @@
     margin-top:2rem;
     margin-bottom: 2rem;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 2rem;
     font-family:sans-serif;
     letter-spacing: 3px;
-    // animation: fadeIn 1s 1.8s backwards;
   }
 
   .flat-button {

@@ -29,9 +29,9 @@ const Work = React.forwardRef((props, ref) => {
             <h1>{experience.company}</h1>
             <h2>{experience.position}</h2>
             <p>{experience.description}</p>
-            <Stack direction="horizontal" gap={2}>
+            <Stack className="custom-stack" gap={2}>
               {experience.skills.map((skill) => (
-                <Badge key={skill} pill bg="secondary">
+                <Badge key={skill} pill bg="secondary" className="custom-pill">
                   {skill}
                 </Badge>
               ))}
