@@ -7,7 +7,8 @@ import './Home.scss'
 import './Spotlight.scss'
 import About from '../About/About'
 import Work from '../Work/Work'
-import ProjectRight from '../Project/ProjectRight'
+import ProjectRight from '../Project/ProjectRight';
+import Footer from '../Footer/Footer';
 
 
 const Home = () => {
@@ -132,8 +133,7 @@ const Home = () => {
               </li>
             </ul>
             <Link to="/contact" className='flat-button'>CONTACT ME</Link>
-
-
+            <Footer />
           </Col>
           <Col className="ml-md-12 mt-md-0 mt-2" xs={12} md={6}>
 
