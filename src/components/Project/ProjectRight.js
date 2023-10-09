@@ -5,6 +5,7 @@ import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
 import tarotImage from '../../assets/images/TarotScreens.jpg';
 import fridgeImage from '../../assets/images/FridgeMates.jpg';
 import cineWatch from '../../assets/images/cinewatch.jpg';
+import mysteryImage from '../../assets/images/MidnightMarauder.jpg';
 import './ProjectRight.scss';
 
 const ProjectRight = React.forwardRef((props, ref) => {
@@ -12,7 +13,8 @@ const ProjectRight = React.forwardRef((props, ref) => {
     <div ref={ref}>
       <h1 className="section-heading">Some of My Projects</h1>
       <div className="project-container">
-        <div className="project">
+
+      <div className="project">
           <div className="project-content">
           <div className="project-label">Android Application</div>
             <h4 className="project-title">Daily Tarot App</h4>
@@ -47,6 +49,44 @@ const ProjectRight = React.forwardRef((props, ref) => {
           </div>
           <div className="project-img">
             <img src={tarotImage} alt="Screenshots of Daily Tarot App" />
+          </div>
+        </div>
+
+        <div className="project">
+          <div className="project-content">
+          <div className="project-label">Browser Game Application</div>
+            <h4 className="project-title">Midnight Maruader</h4>
+            <div className="project-details">
+              <p>Browser based choose your own adventure murder mystery game. Allows users to interactively search for evidence and alibis of characters to solve a murder mystery on a steam punk airship.</p>
+              <ul className="project-tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div className="project-links">
+                <a
+                  target="_blank"
+                  aria-label="External Link"
+                  rel="noreferrer"
+                  href="https://amcwustl.github.io/MysteryGame/"
+                  title="Link to Game"
+                >
+                  <FontAwesomeIcon icon={faExternalLinkSquareAlt} color="4d4d4e" />
+                </a>
+                <a
+                  target="_blank"
+                  aria-label="Github Repo"
+                  rel="noreferrer"
+                  href="https://github.com/amcwustl/MysteryGame"
+                  title="View Github Repo"
+                >
+                  <FontAwesomeIcon icon={faGithub} color="4d4d4e" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="project-img">
+            <img src={mysteryImage} alt="Screenshots of Daily Tarot App" />
           </div>
         </div>
 
