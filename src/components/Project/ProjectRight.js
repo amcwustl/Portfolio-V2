@@ -58,7 +58,7 @@ const ProjectRight = React.forwardRef((props, ref) => {
         <div className="project">
           <div className="project-content">
             <div className="project-label">Browser Game Application</div>
-            <h4 className="project-title">Midnight Maruader</h4>
+            <h4 className="project-title">Mystery Game</h4>
             <div className="project-details">
               <p>Browser based choose your own adventure murder mystery game. Allows users to interactively search for evidence and alibis of characters to solve a murder mystery on a steam punk airship.</p>
               <ul className="project-tech-list">
@@ -139,17 +139,20 @@ const ProjectRight = React.forwardRef((props, ref) => {
                 <li>PostgreSQL</li>
               </ul>
               <div className="project-links">
-                <a target="_blank" aria-label="External Link" rel="noreferrer" href="https://github.com/amcwustl">
+                <a target="_blank" aria-label="External Link" rel="noreferrer" href="https://github.com/RAD-Fellows/fridgemates">
                   <FontAwesomeIcon icon={faExternalLinkSquareAlt} color="4d4d4e" />
                 </a>
-                <a target="_blank" aria-label="Github Repo" rel="noreferrer" href="https://github.com/amcwustl">
+                <a target="_blank" aria-label="Github Repo" rel="noreferrer" href="https://github.com/RAD-Fellows/fridgemates">
                   <FontAwesomeIcon icon={faGithub} color="4d4d4e" />
                 </a>
               </div>
             </div>
           </div>
           <div className="project-img">
-            <img src={fridgeImage} alt="Home page of Fridge Mates Application" />
+            <a href='https://github.com/RAD-Fellows/fridgemates'>
+             <img src={fridgeImage} alt="Home page of Fridge Mates Application" /> 
+            </a>
+            
           </div>
         </div>
 

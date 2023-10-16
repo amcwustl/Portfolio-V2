@@ -7,7 +7,7 @@
     h1 {
       color: white;
       font-size: 32px;
-      margin:0;
+      margin: 10px 10px;
       font-family: 'Coolvetica';
       font-weight: 400;
     }
@@ -24,6 +24,7 @@
   
     .flat-button {
       color:#64ffda;
+      background: transparent;
       font-size: 13px;
       font-weight:400;
       letter-spacing: 4px;
@@ -31,7 +32,7 @@
       text-decoration: none;
       padding: 10px 18px;
       border: 1px solid #64ffda;
-      margin-top: 25px;
+      margin: 0;
       white-space: nowrap;
   
     }
@@ -61,7 +62,7 @@
 
         .nav-link {
           display: flex; 
-          font-size: 16px;
+          font-size: 18px;
           align-items: center; // Vertically center-align text and bar
           color: slategray; // Non-active links will be slate gray
           padding: 0; // Adjusted padding
@@ -156,6 +157,7 @@
 
   .flat-button {
     color:#64ffda;
+    background:transparent;
     font-size: 13px;
     font-weight:400;
     letter-spacing: 4px;

@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -18,6 +18,8 @@ const Home = () => {
   const workRef = useRef(null);
   const projectsRef = useRef(null);
   const [activeSection, setActiveSection] = useState("about");
+  const recipientEmail = 'amclarkwustl@gmail.com';
+  const subject = 'Portfolio Referral -';
 
 
   useEffect(() => {
@@ -85,6 +87,13 @@ const Home = () => {
     setOpacity(0);
   };
 
+  const composeEmail = () => {
+    const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}`;
+    window.location.href = mailtoLink;
+  };
+
+  
+
 
   return (
     <div
@@ -132,7 +141,7 @@ const Home = () => {
                 <a className={`nav-link ${activeSection === "projects" ? "active" : ""}`} href="#projects" onClick={() => smoothScroll(projectsRef)} >Projects</a>
               </li>
             </ul>
-            <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+            <button onClick={composeEmail} className='flat-button'>CONTACT ME</button>
             <Footer />
           </Col>
           <Col className="ml-md-12 mt-md-0 mt-2" xs={12} md={6}>
