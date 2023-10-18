@@ -18,7 +18,7 @@ const Work = React.forwardRef((props, ref) => {
   }, []);
   
   return (
-    <Container ref={ref}>
+    <Container className='work-container' ref={ref}>
       <h1 className="section-heading">Where I've Worked</h1>
       {workExperience.map((experience) => (
         <Row className="work-experience" key={experience.id}>
