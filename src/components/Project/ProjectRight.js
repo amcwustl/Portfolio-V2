@@ -39,7 +39,7 @@ const ProjectRight = React.forwardRef((props, ref) => {
                   target="_blank"
                   aria-label="Github Repo"
                   rel="noreferrer"
-                  href="https://github.com/JavaWookies/Daily-Tarot"
+                  href="https://github.com/JavaWookies/Daily-Tarot-V2"
                   title="View Github Repo"
                 >
                   <FontAwesomeIcon icon={faGithub} color="4d4d4e" />
@@ -48,7 +48,13 @@ const ProjectRight = React.forwardRef((props, ref) => {
             </div>
           </div>
           <div className="project-img">
-            <a href='https://play.google.com/store/apps?hl=en_US&gl=US'>
+            <a 
+            target="_blank"
+            aria-label="Link to App on Google Play"
+            rel="noreferrer"
+            href='https://play.google.com/store/apps?hl=en_US&gl=US'
+            title="Daily Tarot"
+            >
               <img src={tarotImage} alt="Screenshots of Daily Tarot App" />
             </a>
 
@@ -69,7 +75,7 @@ const ProjectRight = React.forwardRef((props, ref) => {
               <div className="project-links">
                 <a
                   target="_blank"
-                  aria-label="External Link"
+                  aria-label="External Link to Game"
                   rel="noreferrer"
                   href="https://amcwustl.github.io/MysteryGame/"
                   title="Link to Game"
@@ -89,10 +95,15 @@ const ProjectRight = React.forwardRef((props, ref) => {
             </div>
           </div>
           <div className="project-img">
-            <a href='https://amcwustl.github.io/MysteryGame/'>
+            <a 
+            target="_blank"
+            aria-label="External Link to Game"
+            rel="noreferrer"
+            href="https://amcwustl.github.io/MysteryGame/"
+            title="Midnight Marauder"
+            >
               <img src={mysteryImage} alt="Screenshots of Daily Tarot App" />
             </a>
-
           </div>
         </div>
 
@@ -110,17 +121,32 @@ const ProjectRight = React.forwardRef((props, ref) => {
                 <li>MongoDB</li>
               </ul>
               <div className="project-links">
-                <a target="_blank" aria-label="External Link" rel="noreferrer" href="https://cinewatch-ai.netlify.app/">
+                <a 
+                target="_blank" 
+                aria-label="External Link" 
+                rel="noreferrer" 
+                href="https://cinewatch-ai.netlify.app/"
+                title="Cinewatch AI">
                   <FontAwesomeIcon icon={faExternalLinkSquareAlt} color="4d4d4e" />
                 </a>
-                <a target="_blank" aria-label="Github Repo" rel="noreferrer" href="https://github.com/AIOpenWorkSpace">
+                <a 
+                target="_blank" 
+                aria-label="Github Repo" 
+                rel="noreferrer" 
+                href="https://github.com/AIOpenWorkSpace"
+                title="Github Repo">
                   <FontAwesomeIcon icon={faGithub} color="4d4d4e" />
                 </a>
               </div>
             </div>
           </div>
           <div className="project-img">
-            <a href='https://cinewatch-ai.netlify.app/'>
+            <a 
+            target="_blank" 
+            aria-label="External Link" 
+            rel="noreferrer" 
+            href='https://cinewatch-ai.netlify.app/'
+            title="Cinewatch AI">
               <img src={cineWatch} alt="Home page of CineWatch Application" />
             </a>
             
@@ -139,17 +165,23 @@ const ProjectRight = React.forwardRef((props, ref) => {
                 <li>PostgreSQL</li>
               </ul>
               <div className="project-links">
-                <a target="_blank" aria-label="External Link" rel="noreferrer" href="https://github.com/RAD-Fellows/fridgemates">
-                  <FontAwesomeIcon icon={faExternalLinkSquareAlt} color="4d4d4e" />
-                </a>
-                <a target="_blank" aria-label="Github Repo" rel="noreferrer" href="https://github.com/RAD-Fellows/fridgemates">
+                <a 
+                target="_blank" 
+                aria-label="Github Repo" 
+                rel="noreferrer" 
+                href="https://github.com/RAD-Fellows/fridgemates">
                   <FontAwesomeIcon icon={faGithub} color="4d4d4e" />
                 </a>
               </div>
             </div>
           </div>
           <div className="project-img">
-            <a href='https://github.com/RAD-Fellows/fridgemates'>
+            <a 
+            target="_blank" 
+            aria-label="Github Repo" 
+            rel="noreferrer" 
+            href='https://github.com/RAD-Fellows/fridgemates'
+            title="FridgeMates Repo">
              <img src={fridgeImage} alt="Home page of Fridge Mates Application" /> 
             </a>
             
