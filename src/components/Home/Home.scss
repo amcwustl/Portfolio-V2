@@ -55,38 +55,38 @@
 
     .nav {
       display: flex;
-      flex-direction: column; // Stack items vertically
+      flex-direction: column;
 
       .nav-item {
-        margin-bottom: 10px; // Space between the items
+        padding: 0;
 
         .nav-link {
           display: flex; 
           font-size: 18px;
-          align-items: center; // Vertically center-align text and bar
-          color: slategray; // Non-active links will be slate gray
-          padding: 0; // Adjusted padding
-          text-decoration: none; // Remove underline
-          transition: transform 0.3s ease; // Transition for the text slide effect
-          position: relative; // This will help us position the ::before element correctly
+          align-items: center; 
+          color: slategray; 
+          padding: 10px 0; 
+          text-decoration: none; 
+          transition: transform 0.3s ease; 
+          position: relative;
 
-          &::before { // This is the horizontal bar
+          &::before { 
             content: '';
             position: absolute;
-            left: -35px; // Position the bar to the left of the text by 25px (20px bar width + 5px gap)
-            top: 50%; // Center the bar vertically
-            transform: translateY(-50%); // Vertically align the bar
-            height: 2px; // Adjust the bar's height
-            width: 30px; // Length of the horizontal bar
+            left: -35px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            height: 2px; 
+            width: 30px; 
             background-color: white;
-            transform: scaleX(0); // Initially scale it to 0 to hide
+            transform: scaleX(0); 
             transform-origin: left;
             transition: transform 0.3s ease;
           }
 
-          &.active, &:hover { // Style for active link or on hover
-            color: white; // Make text color white
-            transform: translateX(35px); // Slide the text to the right by the width of the bar + gap
+          &.active, &:hover { 
+            color: white; 
+            transform: translateX(35px); 
 
             &::before { // Show the horizontal bar on active link or on hover
               transform: scaleX(1);
