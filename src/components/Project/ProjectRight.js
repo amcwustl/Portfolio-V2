@@ -30,8 +30,8 @@ const ProjectRight = React.forwardRef((props, ref) => {
                   target="_blank"
                   aria-label="External Link"
                   rel="noreferrer"
-                  href="https://github.com/amcwustl"
-                  title="Coming Soon to Google Play"
+                  href="https://play.google.com/store/apps/details?id=com.amcwustl.dailytarot"
+                  title="Google Play Link"
                 >
                   <FontAwesomeIcon icon={faExternalLinkSquareAlt} color="4d4d4e" />
                 </a>
@@ -52,7 +52,7 @@ const ProjectRight = React.forwardRef((props, ref) => {
             target="_blank"
             aria-label="Link to App on Google Play"
             rel="noreferrer"
-            href='https://play.google.com/store/apps?hl=en_US&gl=US'
+            href='https://play.google.com/store/apps/details?id=com.amcwustl.dailytarot'
             title="Daily Tarot"
             >
               <img src={tarotImage} alt="Screenshots of Daily Tarot App" />
