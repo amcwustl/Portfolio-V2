@@ -23,7 +23,8 @@ const Work = React.forwardRef((props, ref) => {
       {workExperience.map((experience) => (
         <Row className="work-experience" key={experience.id}>
           <Col xs={3}>
-            <p className="date">{experience.date}</p>
+            <p className="date">{experience.startdate}</p>
+            <p className ="date enddate">{experience.enddate}</p>
           </Col>
           <Col xs={9}>
             <h1>{experience.company}</h1>
