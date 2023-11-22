@@ -44,13 +44,15 @@
       font-family: sans-serif;
       font-weight:300;
       opacity: 0.8;
+      margin-bottom: 0;
     }
   }
-
-
 }
 
 @media(min-width: 768px){
+  .work-container{
+    padding: 12px 0;
+  }
   .custom-pill {
     font-size: 14px;     
   }
@@ -67,17 +69,22 @@
     margin-top: 40px;
   }
   .work-experience {
-  padding: 20px; 
+  padding: 20px 0; 
   border-radius: 8px;
   transition: background-color 0.3s, opacity 0.3s;
   opacity: 1;
   
 
   .date{
-    font-size: 12px;
+    font-size: 1rem;
     font-family: 'Helvetica Neue';
     font-weight: 400;
     margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  .enddate{
+    margin-top: 0;
   }
 
   h1{

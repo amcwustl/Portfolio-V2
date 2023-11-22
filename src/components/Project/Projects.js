@@ -6,9 +6,9 @@ import tarotImage from '../../assets/images/TarotScreens.jpg';
 import fridgeImage from '../../assets/images/FridgeMates.jpg';
 import cineWatch from '../../assets/images/cinewatch.jpg';
 import mysteryImage from '../../assets/images/MidnightMarauder.jpg';
-import './ProjectRight.scss';
+import './Projects.scss';
 
-const ProjectRight = React.forwardRef((props, ref) => {
+const Projects = React.forwardRef((props, ref) => {
   return (
     <div ref={ref}>
       <h1 className="section-heading">Some of My Projects</h1>
@@ -187,10 +187,9 @@ const ProjectRight = React.forwardRef((props, ref) => {
             
           </div>
         </div>
-
       </div>
     </div>
   );
 });
 
-export default ProjectRight
+export default Projects

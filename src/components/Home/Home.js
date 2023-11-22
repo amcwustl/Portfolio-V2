@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from 'react'
-// import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -7,7 +6,7 @@ import './Home.scss'
 import './Spotlight.scss'
 import About from '../About/About'
 import Work from '../Work/Work'
-import ProjectRight from '../Project/ProjectRight';
+import Projects from '../Project/Projects';
 import Footer from '../Footer/Footer';
 
 
@@ -48,7 +47,6 @@ const Home = () => {
 
   const smoothScroll = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
-    // Prevent default behavior
     return false;
   }
 
@@ -92,9 +90,6 @@ const Home = () => {
     window.location.href = mailtoLink;
   };
 
-  
-
-
   return (
     <div
       ref={divRef}
@@ -129,7 +124,7 @@ const Home = () => {
 
 
             </h1>
-            <h2>Full-Stack Developer</h2>
+            <h2>Software Developer</h2>
             <ul className="nav">
               <li className="nav-item">
                 <a className={`nav-link ${activeSection === "about" ? "active" : ""}`} href="#about" onClick={() => smoothScroll(aboutRef)}>About</a>
@@ -145,14 +140,9 @@ const Home = () => {
             <Footer />
           </Col>
           <Col className="ml-md-12 mt-md-0 mt-2" xs={12} md={6}>
-
-
             <About ref={aboutRef} id="about" />
             <Work ref={workRef} id="work" />
-            <ProjectRight ref={projectsRef} id="projects" />
-
-
-
+            <Projects ref={projectsRef} id="projects" />
           </Col>
         </Row>
       </Container>
@@ -164,7 +154,6 @@ const Home = () => {
         }}
       />
     </div>
-
   )
 }
 
