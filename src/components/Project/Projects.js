@@ -102,7 +102,7 @@ const Projects = React.forwardRef((props, ref) => {
             href="https://amcwustl.github.io/MysteryGame/"
             title="Midnight Marauder"
             >
-              <img src={mysteryImage} alt="Screenshots of Daily Tarot App" />
+              <img src={mysteryImage} alt="Screenshot of Midnight Marauder Game" />
             </a>
           </div>
         </div>
